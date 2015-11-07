@@ -15,12 +15,29 @@ var github = new Github({
 });
 var user = github.getUser();
 
-user.userRepos('twoodrow', function(err, repos){ 
+user.userRepos('ianrtracey', function(err, repos) { 
 
-	var languages = [];
-	languages.push(repos.forEach(getLanguages));
+	var languages = collectLanguages(repos);
+	console.log(languages);
 });
 
-function printLanguages(element, index, array) {
-	return element.language;
+
+function collectLanguages(repos) {
+	var languages = [];
+	repos.forEach(function(repo) {
+		languages.push(repo.language);
+	});
+	languages = languages.filter(function(n){ return n != null });
+	return collectLanguageCounts(languages);
 }
+
+function collectLanguageCounts(languages) {
+	var l = {};
+	l["repos"] = languages.length;
+	languages.map( function(language) { 
+		if (language in l) l[language]++; else l[language] = 1; 
+	});
+	return l;
+}
+
+

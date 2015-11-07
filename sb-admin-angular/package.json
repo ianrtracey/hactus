@@ -5,7 +5,10 @@
     "type": "git",
     "url": "https://github.com/start-angular/sb-admin-angular"
   },
-  "dependencies": {},
+  "dependencies": {
+    "connect-livereload": "^0.5.3",
+    "livereload": "^0.4.0"
+  },
   "devDependencies": {
     "grunt": "^0.4.1",
     "grunt-autoprefixer": "^0.7.3",
