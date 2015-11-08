@@ -57,7 +57,7 @@ module.exports = {
         type: Sequelize.BLOB
       },
       work_preferences: {
-        type: Sequelize.ARRAY
+        type: Sequelize.ARRAY(Sequelize.STRING)
       },
       createdAt: {
         allowNull: false,
