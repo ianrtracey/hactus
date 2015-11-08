@@ -12,6 +12,7 @@ module.exports = {
         isBetaMember: false
       }], {});
     */
+
     return queryInterface.bulkInsert("Attendee", [{
       application_start: "1111-22-33 44:55:66",
       application_submit: "1111-22-33 44:55:67",
@@ -29,7 +30,7 @@ module.exports = {
       linkedin_account: "https://linkedin.com/fuckyou",
       personal_website: "https://fuck.you",
       resume: "bits bits bits",
-      what_do_you_like_to_work_with: ["one", "two", "three"],
+      work_preferences: ["one", "two", "three"],
     }])
   },
 

@@ -1,5 +1,6 @@
+'use strict';
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('Attendee', {
+  var Attendee = sequelize.define('Attendee', {
     application_start: DataTypes.STRING,
     application_submit: DataTypes.STRING,
     name: DataTypes.STRING,
@@ -16,6 +17,13 @@ module.exports = function(sequelize, DataTypes) {
     linkedin_account: DataTypes.STRING,
     personal_website: DataTypes.STRING,
     resume: DataTypes.BLOB,
-    what_do_you_like_to_work_with: DataTypes.ARRAY(DataTypes.STRING),
-  })
-}
+    work_preferences: DataTypes.ARRAY
+  }, {
+    classMethods: {
+      associate: function(models) {
+        // associations can be defined here
+      }
+    }
+  });
+  return Attendee;
+};
