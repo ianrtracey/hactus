@@ -13,7 +13,7 @@ module.exports = {
       }], {});
     */
 
-    return queryInterface.bulkInsert("Attendee", [{
+    return queryInterface.bulkInsert("Attendees", [{
       application_start: "1111-22-33 44:55:66",
       application_submit: "1111-22-33 44:55:67",
       name: "Travis sucks at Postgres",
@@ -42,6 +42,6 @@ module.exports = {
       Example:
       return queryInterface.bulkDelete('Person', null, {});
     */
-    return queryInterface.bulkDelete("Attendee")
+    return queryInterface.bulkDelete("Attendees")
   }
 };
