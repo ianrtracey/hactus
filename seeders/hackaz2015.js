@@ -31,8 +31,6 @@ module.exports = {
       personal_website: "https://fuck.you",
       resume: "bits bits bits",
       work_preferences: ["one", "two", "three"],
-      createdAt: Sequelize.NOW,
-      updatedAt: Sequelize.NOW,
     }])
   },
 

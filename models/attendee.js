@@ -18,8 +18,8 @@ module.exports = function(sequelize, DataTypes) {
     personal_website: DataTypes.STRING,
     resume: DataTypes.BLOB,
     work_preferences: DataTypes.ARRAY(DataTypes.STRING),
-    createdAt: Sequelize.DATE,
-    updatedAt: Sequelize.DATE
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE
   }, {
     classMethods: {
       associate: function(models) {
