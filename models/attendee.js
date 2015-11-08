@@ -17,7 +17,9 @@ module.exports = function(sequelize, DataTypes) {
     linkedin_account: DataTypes.STRING,
     personal_website: DataTypes.STRING,
     resume: DataTypes.BLOB,
-    work_preferences: DataTypes.ARRAY(DataTypes.STRING)
+    work_preferences: DataTypes.ARRAY(DataTypes.STRING),
+    createdAt: Sequelize.DATE,
+    updatedAt: Sequelize.DATE
   }, {
     classMethods: {
       associate: function(models) {
